@@ -1,0 +1,141 @@
+:root {
+  /* main colors */
+  --primary-color: #199c8b;
+  --primary-light-color: #00b4db;
+  --primary-other-color: #0083b0;
+  
+  --secondary-color: #5a3f29;
+  --secondary-light-color: #0083b0;
+  
+  /* general color */
+  --grey-light-color: rgb(219, 219, 219);
+  --white-color: whitesmoke;
+  
+  /* gradients */
+  --primary-gradient: -webkit-linear-gradient(180deg, rgba(0,180,219,1) 0%, rgba(0,131,176,1) 97%);
+
+  --mainfont:'Helvetica', sans-serif;
+
+  --button-height: 28px;
+  --p-size: 12px;
+  --desktop-margin: 40px;
+  --mobil-margin: 20px;
+}
+
+/* general*/
+body {
+  margin:0 ;
+  font-family: var(--mainfont)
+}
+
+h1 {
+  font-size: 40px;
+  padding: 0;
+  margin-top: 0;
+  text-align: center;
+}
+ol{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.btn {
+  color: var(--white-color);
+  outline: none;
+  border: none;
+  height: var(--button-height);
+  border-radius: calc(var(--button-height)/2);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: var(--p-size);
+}
+
+.btn-primary {
+  background: var(--primary-color)
+}
+
+
+.wrapper {
+  background-color: var(--grey-light-color);
+  min-height: 7000px;
+}
+
+
+/*---------------HEADER---------------*/
+.header {
+  background-color: rgb(67, 67, 153);
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 170px 1fr;
+  grid-template-areas: 
+  "nav" "hero";
+}
+/*-------------NAVBAR-----------------*/
+.nav {
+  grid-area: nav;
+  border: 1px solid red;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav_logo {
+  height: 100%;
+  border: 1px solid red;
+}
+
+.nav_items {
+  border: 1px solid red;
+}
+
+
+
+/*-------------HERO-----------------*/
+.hero {
+  grid-area: hero;
+  border: 1px solid red;
+  color: var(--white-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+}
+.hero_container {
+  border: 1px solid red;
+  margin: auto var(--desktop-margin);
+}
+
+
+/*-------------MAIN Content-----------------*/
+.main {
+  background-color: var(--white-color);
+  height: 400px;
+  margin: 0 var(--desktop-margin);
+  margin-top: -10vh;
+  border-radius: 4px;
+  padding: 40px;
+}
+
+section {
+  margin: 10px;
+}
+
+
+/*-------------ABOUT-----------------*/
+.about {
+  border: 1px solid red;
+  height: 300px;
+  margin:
+}
