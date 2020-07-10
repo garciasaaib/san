@@ -1,10 +1,10 @@
 :root {
   /* main colors */
-  --primary-color: #199c8b;
+  --primary-color: #2571a7;
   --primary-light-color: #00b4db;
   --primary-other-color: #0083b0;
   
-  --secondary-color: #5a3f29;
+  --form-color: ;
   --secondary-light-color: #0083b0;
   
   /* general color */
@@ -48,7 +48,6 @@ h3 {
 
 label {
   font-size: 10px;
-  margin-top: 2000px;
 }
 p {
   font-weight: lighter;
@@ -111,10 +110,47 @@ a {
   justify-content: space-evenly;
   z-index: 1;
   width: 100%;
+  animation: 500ms slideout ease;
+
 }
 
-.nav .not_top{
+
+.not_top{
   background: var(--white-color);
+  color: black;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  height: 50px;
+  padding: 8px;
+  animation: 500ms slidein ease-out;
+}
+@keyframes slidein {
+  from {
+    height: 80px;
+    opacity: 0;
+  }
+
+  to {
+    height: 50px;
+    opacity: 1;
+  }
+}
+@keyframes slideout {
+  from {
+    margin-bottom: 170px;
+    height: 50px;
+    background-color: var(--white-color);
+  }
+  to {
+    margin-bottom: -100px;
+    height: 170px;
+    background-color: transparent;
+
+  }
+
+}
+
+.not_top a {
+  color: var(--grey-color);
 
 }
 
@@ -217,7 +253,7 @@ section {
   grid-template-columns: 1fr 1fr;
   background-image: url('./assets/static/services.jpg');
   background-size: cover;
-  margin: 72px 0px;
+  margin: 72px 0px 0;
   padding: 80px 40px 72px;
   position: relative;
 }
@@ -233,7 +269,7 @@ section {
 .contact_msg {
   z-index: 0;
   color: var(--white-color);
-  padding: 0 50px 0 20px;
+  padding: 0 90px 0 20px;
 }
 .contact_msg p,.contact_msg h2{
   text-align: initial;
@@ -278,5 +314,30 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 8px;
-  align-content: center;
+  align-items: end;
+  justify-items: start;
+
+}
+
+.footer {
+  background: var(--grey-dark-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% ;
+  padding-top:20px;
+  padding-bottom: 20px;
+  height: inherit;
+}
+
+.footer_img {
+  justify-items: flex-end;
+  height: 100px;
+  margin-right: 40px;
 }

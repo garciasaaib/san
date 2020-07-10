@@ -11,9 +11,9 @@
   <div class="wrapper">
 
     <!-- Hero & Nav -->
-    <header class="header">
-      <nav class="nav not_top">
-        <img class="nav_logo" src="./assets/static/logo.png" alt="logo">
+    <header id="header" class="header">
+      <nav id="nav" class="nav">
+        <img class="nav_logo" src="./assets/static/logo2.png" alt="logo">
         <ol class="nav_items">
           <li><a href="">Home</a></li>
           <li><a href="">Nosotros</a></li>
@@ -74,8 +74,8 @@
       <section class="contact">
         <div class="contact_layout"></div>
         <div class="contact_msg">
-          <h2>Hola como estas</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium impedit dolorum magni quia aut aliquid aperiam libero ratione modi, dignissimos deserunt explicabo, ipsa nostrum cum? Porro tenetur minus a ipsum.</p>
+          <h2>Hagamos equipo</h2>
+          <p>Tener una idea es el primer paso para comenzar a crear algo grandioso, pero no es el único paso. Contacta con nosotros y hablemos un poco del proceso.</p>
         </div>
         <div class="contact_form_container">
           <form class="contact_form" action="">
@@ -93,22 +93,54 @@
               <textarea class="input" name="message" id="" ></textarea>
             </label>
             <div class="contact_form_buttons">
-              <p>Respondemos rápido</p>
+              <p>Respondemos rápido...</p>
               <button class="btn btn-primary" placeholder="Enviar">Enviar</button>
             </div>
           </form>
         </div> 
       </section>
 
-      <footer>
-        
+      <footer class="footer">
+        <div class="footer_info">
+          <p>Contacto</p>
+          <label><strong>Email: </strong>sistemasautomatizados@nayarit.com</label>
+          <label for=""><strong>Teléfono: </strong>(+52) 3111145982</label>
+          <br /> 
+          <label>© 2020 Servicios Automatizados Nayarit</label>
+          <label><a href="https://iconos8.es/">Icons</a></label>
+        </div>
+        <img class="footer_img" src="./assets/static/logo4.png">
       </footer>
 
 
     </div>
   </div>
   <script>
+    const $header = document.getElementById('header')
+    const $nav = document.getElementById('nav')
+    const $nav_logo = document.querySelector('.nav_logo')
+    
+    const options = {
+      // root: document.querySelector('body'),
+      rootMargin: '0px 0px 0px 0px',
+      threshold: .9,
+    }
 
+    function callback(entries, observer){
+      const entry = entries[0]
+      const onTop = entry.intersectionRatio >= .9
+      if(onTop){
+        console.log('transparente')
+        $nav.classList.remove('not_top')
+        $nav_logo.setAttribute('src', './assets/static/logo2.png')
+      }else{
+        console.log('blanco')
+        $nav.classList.add('not_top')
+        $nav_logo.setAttribute('src', './assets/static/logo3.png')
+      }
+    } 
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe($header)
   </script>
 </body>
 </html>
