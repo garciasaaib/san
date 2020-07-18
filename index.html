@@ -12,20 +12,21 @@
 
     <!-- Hero & Nav -->
     <header id="header" class="header">
-      <nav id="nav" class="nav">
+      <nav id="nav" class="nav not_top">
         <img class="nav_logo" src="./assets/static/logo2.png" alt="logo">
-        <ol class="nav_items">
+        <ol class="nav_items none">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#project">Proyectos</a></li>
           <li><a href="#contact">Contactanos</a></li>
         </ol>
+        <div class="burger"></div>
       </nav>
       <section id="home" class="hero">
         <div class="hero_container">
-          <h1>IMPULSA TU NEGOCIO <br />¡AUTOMATIZALO!</h1>
+          <h1>CREA TU NEGOCIO PROPIO<br />¡AUTOMATIZADO!</h1>
           <div>
-            <p>Aumenta Tus Ventas Automatizando La Produccion De Tus Productos Con Los Estandares De Calidad </p>
+            <p>Automatiza Tu Proceso De Produccion Con Altos Estandares De Calidad Y Vende Cuanto Necesites</p>
           </div>
         </div>
       </section>
@@ -33,40 +34,50 @@
 
 
     <!-- All the other content-->
-    <div class="main">
+    <div id="about" class="main">
 
-      <section id="about" class="about">
+      <section  class="about">
         <div class="about_container">
           <h2>Impulsamos el desarrollo de tu negocio automatizando en pequeñas tareas de la fabricación de tu producto en venta.</h2>
         </div>
 
+        <div class="about_card">
+          <h3>Misión</h3>
+          <p class="services_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolor labore minima sequi laborum dolorem quasi cupiditate in adipisci temporibus minus fuga atque dignissimos incidunt, explicabo, eum sapiente eveniet nisi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, possimus non nisi consequatur adipisci quasi praesentium nobis, deserunt debitis ipsum harum quidem eligendi. Dolorem totam fugit asperiores optio commodi similique.</p>
+        </div>
+
+        <div class="about_card">
+          <h3>Visión</h3>
+          <p class="services_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolor labore minima sequi laborum dolorem quasi cupiditate in adipisci temporibus minus fuga atque dignissimos incidunt, explicabo, eum sapiente eveniet nisi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, possimus non nisi consequatur adipisci quasi praesentium nobis, deserunt debitis ipsum harum quidem eligendi. Dolorem totam fugit asperiores optio commodi similique.</p>
+        </div>
       </section>
 
 
-      <section id="project" class="services">
-        <div class="services_card">
-          <img class="services_img" src="./assets/static/analizar.png" alt="analitic image">
-          <div class="services_title">
-            <h3>Analizamos Procedimientos</h3>
+      <section id="project" class="project">
+        <div class="services">
+          <div class="services_card">
+            <img class="services_img" src="./assets/static/analizar.png" alt="analitic image">
+            <div class="services_title">
+              <h3>Analizamos Procedimientos</h3>
+            </div>
+            <p class="services_text">Trabajamos en tu idea de negocio, el proceso que deseas automatizar, el tamaño y la estructura que quieras para tus máquinas. Nos adecuamos a la construcción del proyecto en base a tu presupuesto y espectativas.</p>
           </div>
-          <p class="services_text">Trabajamos en tu idea de negocio, el proceso que deseas automatizar, el tamaño y la estructura que quieras para tus máquinas. Nos adecuamos a la construcción del proyecto en base a tu presupuesto y espectativas.</p>
-        </div>
-        <div class="services_card">
-          <img class="services_img" src="./assets/static/diseño.png" alt="design image">
-          <div class="services_title">
-            <h3>Diseñamos Tecnología</h3>
-          </div>
-           <p class="services_text">Diseño en base a sistemas mecánicos, eléctricos, de control, neumáticos, etc. El objetivo es obtener el aparato que trabaje para ti de manera automatica, con calidad y seguridad en el proceso. 
+          <div class="services_card">
+            <img class="services_img" src="./assets/static/diseño.png" alt="design image">
+            <div class="services_title">
+              <h3>Diseñamos Tecnología</h3>
+            </div>
+            <p class="services_text">Diseño en base a sistemas mecánicos, eléctricos, de control, neumáticos, etc. El objetivo es obtener el aparato que trabaje para ti de manera automatica, con calidad y seguridad en el proceso. 
             </p>
-        </div>
-        <div class="services_card">
-          <img class="services_img" src="./assets/static/producto.png" alt="">
-          <div class="services_title">
-            <h3>Generamos Soluciones</h3>
           </div>
-          <p class="services_text"> Todos estos sistemas englobados en una máquina que permita establecer un negocio rentable o mejorar el que ya posees, con la velocidad y seguridad que permita alcanzar tus metas de producción, venta y economía. 
-            
-          </p>
+          <div class="services_card">
+            <img class="services_img" src="./assets/static/producto.png" alt="">
+            <div class="services_title">
+              <h3>Generamos Soluciones</h3>
+            </div>
+            <p class="services_text"> Todos estos sistemas englobados en una máquina que permita establecer un negocio rentable o mejorar el que ya posees, con la velocidad y seguridad que permita alcanzar tus metas de producción, venta y economía. 
+            </p>
+          </div>
         </div>
       </section>
 
@@ -116,11 +127,17 @@
     </div>
   </div>
   <script>
+    /*
+    if (screen.width < 1024) document.write ("Pequeña") 
+    else if (screen.width < 1280) document.write ("Mediana") 
+    else document.write ("Grande") 
+*/
+
     const $header = document.getElementById('header')
     const $nav = document.getElementById('nav')
     const $nav_logo = document.querySelector('.nav_logo')
     
-    const options = {
+    /*const options = {
       // root: document.querySelector('body'),
       rootMargin: '0px 0px 0px 0px',
       threshold: .9,
@@ -140,7 +157,7 @@
       }
     } 
     const observer = new IntersectionObserver(callback, options);
-    observer.observe($header)
+    observer.observe($header)*/
   </script>
 </body>
 </html>

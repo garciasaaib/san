@@ -1,0 +1,18 @@
+@media (max-width: 700px) {
+  body{
+    background: red;
+  }
+
+  .main {
+    margin: 0 ;
+  }
+
+  .contact {
+    display: flex;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+}

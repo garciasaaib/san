@@ -1,3 +1,5 @@
+
+
 :root {
   /* main colors */
   --primary-color: #2571a7;
@@ -79,6 +81,9 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   font-size: var(--p-size);
+}
+.none {
+  display: none;
 }
 
 .btn-primary {
@@ -203,15 +208,25 @@ section {
 /*-------------ABOUT-----------------*/
 .about {
   margin: 72px 0;
+  margin-bottom: 0;
   color: var(--grey-color);
 }
 .about_container {
   margin: auto 60px;
 }
-
+.about_card {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
 
 
 /*-------------SERVICES-----------------*/
+.project {
+  border: 1px solid red;
+  padding-top: 50px;
+}
+
 .services {
   margin:0;
   padding: 72px 0;
@@ -340,4 +355,52 @@ section {
   justify-items: flex-end;
   height: 100px;
   margin-right: 40px;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .main {
+    margin: 0 10px;
+    margin-top: -10vh;
+
+  }
+
+  .about {
+    margin-left: 10px; 
+  }
+  .about_container {
+    margin: auto 0;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact_msg {
+    padding: 0;
+    text-align: center;
+  }
+  .contact_form {
+    width: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
 }
