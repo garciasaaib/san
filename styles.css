@@ -28,7 +28,7 @@
 
 /* general*/
 body {
-  margin:0 ;
+  margin:0;
   font-family: var(--mainfont)
 }
 
@@ -83,9 +83,8 @@ a {
   font-size: var(--p-size);
 }
 .none {
-  display: none;
+  display: none !important;
 }
-
 .btn-primary {
   background: var(--primary-color)
 }
@@ -101,7 +100,7 @@ a {
   background-image: url('./assets/static/background.jpg');
   background-size: cover;
   height: 90vh;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   position: relative;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -116,7 +115,6 @@ a {
   z-index: 1;
   width: 100%;
   animation: 500ms slideout ease;
-
 }
 
 
@@ -149,9 +147,7 @@ a {
     margin-bottom: -100px;
     height: 170px;
     background-color: transparent;
-
   }
-
 }
 
 .not_top a {
@@ -163,7 +159,9 @@ a {
   height: 100%;
 }
 
-
+.burguer {
+  display: none;
+}
 
 /*-------------HERO-----------------*/
 .hero {
@@ -218,12 +216,13 @@ section {
   max-width: 700px;
   margin: 0 auto;
   margin-top: 60px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 
 /*-------------SERVICES-----------------*/
 .project {
-  border: 1px solid red;
   padding-top: 50px;
 }
 
@@ -291,7 +290,7 @@ section {
 }
 .contact_form_container {
   z-index: 0;
-  width: 100%;
+  width: auto;
 }
 .contact_form {
   background: white;
@@ -365,6 +364,55 @@ section {
   h2 {
     font-size: 20px;
   }
+  .nav {
+    justify-content: space-between;
+  }
+  .nav_logo {
+    margin-left: 5px;
+  }
+  .nav_items {
+    position: absolute;
+    list-style: normal;
+    display: none;
+    top: 65px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    background: var(--white-color);
+    box-shadow: 0px 6px 6px -6px rgba(0,0,0,0.75);
+    animation: olIn;
+  }
+  .d-block {
+    display: block;
+  }
+  @keyframes olIn {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  .nav_items li {
+    padding: 5px;
+    border-top: 1px solid var(--grey-light-color);
+  }
+  .nav_items li:last-child {
+    border-bottom: 1px solid var(--grey-light-color);
+
+  }
+  .burguer {
+    margin-right: 20px;
+    background-image: url('./assets/static/burguer.png');
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: block;
+  }
 
   .main {
     margin: 0 10px;
@@ -373,7 +421,8 @@ section {
   }
 
   .about {
-    margin-left: 10px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
   }
   .about_container {
     margin: auto 0;
@@ -390,11 +439,14 @@ section {
     justify-content: center;
   }
   .contact_msg {
+    margin: 0 auto;
+    max-width: 250px;
     padding: 0;
     text-align: center;
   }
   .contact_form {
-    width: auto;
+    margin: 0 auto;
+    max-width: 250px;
     margin-top: 40px;
     margin-bottom: 40px;
   }

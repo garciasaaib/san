@@ -13,14 +13,14 @@
     <!-- Hero & Nav -->
     <header id="header" class="header">
       <nav id="nav" class="nav not_top">
-        <img class="nav_logo" src="./assets/static/logo2.png" alt="logo">
-        <ol class="nav_items none">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Nosotros</a></li>
-          <li><a href="#project">Proyectos</a></li>
-          <li><a href="#contact">Contactanos</a></li>
+        <img class="nav_logo" src="./assets/static/logo3.png" alt="logo">
+        <ol id="nav-items" class="nav_items">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">Nosotros</a></li>
+          <li><a class="nav-link" href="#project">Proyectos</a></li>
+          <li><a class="nav-link" href="#contact">Contactanos</a></li>
         </ol>
-        <div class="burger"></div>
+        <div id="burguer" class="burguer"></div>
       </nav>
       <section id="home" class="hero">
         <div class="hero_container">
@@ -126,38 +126,7 @@
 
     </div>
   </div>
-  <script>
-    /*
-    if (screen.width < 1024) document.write ("Pequeña") 
-    else if (screen.width < 1280) document.write ("Mediana") 
-    else document.write ("Grande") 
-*/
-
-    const $header = document.getElementById('header')
-    const $nav = document.getElementById('nav')
-    const $nav_logo = document.querySelector('.nav_logo')
-    
-    /*const options = {
-      // root: document.querySelector('body'),
-      rootMargin: '0px 0px 0px 0px',
-      threshold: .9,
-    }
-
-    function callback(entries, observer){
-      const entry = entries[0]
-      const onTop = entry.intersectionRatio >= .9
-      if(onTop){
-        console.log('transparente')
-        $nav.classList.remove('not_top')
-        $nav_logo.setAttribute('src', './assets/static/logo2.png')
-      }else{
-        console.log('blanco')
-        $nav.classList.add('not_top')
-        $nav_logo.setAttribute('src', './assets/static/logo3.png')
-      }
-    } 
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe($header)*/
+  <script src="main.js">
   </script>
 </body>
 </html>
