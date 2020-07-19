@@ -14,8 +14,10 @@ navLinks.forEach(navLink => {
   navLink.addEventListener('click', () => navItems.classList.toggle('d-block'))
 })
 
+/* if this is not responsive */
 
-/*const $header = document.getElementById('header')
+
+const $header = document.getElementById('header')
 const $nav = document.getElementById('nav')
 const $nav_logo = document.querySelector('.nav_logo')
 
@@ -24,7 +26,7 @@ const options = {
   rootMargin: '0px 0px 0px 0px',
   threshold: .9,
 }
-
+/*
 function callback(entries, observer){
   const entry = entries[0]
   const onTop = entry.intersectionRatio >= .9
