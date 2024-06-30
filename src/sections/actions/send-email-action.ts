@@ -1,10 +1,9 @@
 'use server'
 
 import nodemailer from 'nodemailer';
-// const receivedEmail = 'garciasaaib@gmail.com'
-const receivedEmail = 'aleocampe@hotmail.com'
+
 export const sendFormData = async (data: FormData) => {
-	const {SMTP_PASSWORD,SMTP_EMAIL} = process.env
+	const {SMTP_PASSWORD,SMTP_EMAIL, MAIL_TO} = process.env
 	// Configura el transporte de Nodemailer usando SMTP con tus credenciales
 	let transporter = nodemailer.createTransport({
 		service: "gmail",
@@ -22,8 +21,8 @@ export const sendFormData = async (data: FormData) => {
 	try {
 		await transporter.sendMail({
 				from: SMTP_EMAIL, // dirección del remitente
-				to: receivedEmail, // lista de destinatarios
-				subject: "Form enviado desde la pagina", // Línea de asunto
+				to: MAIL_TO, // lista de destinatarios
+				subject: "Alerta: Nuevo interesado en SAN", // Línea de asunto
 				html: `<div>
 				<b>Alerta de formulario de sitio web</b>
 				<p>Alguien ha enviado sus datos desde el sitio web</p>
