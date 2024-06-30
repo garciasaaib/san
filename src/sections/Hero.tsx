@@ -16,7 +16,7 @@ export const Hero = () => {
           Your browser does not support the video tag.
         </video>
       
-			<div className="relative flex flex-col justify-around px-4 max-w-xl text-center h-100 md:justify-center md:gap-10">
+			<div className="relative flex flex-col justify-around px-4 max-w-xl text-center h-100 md:justify-center md:gap-10 dark:text-white">
 				<h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
 					Automatización de procesos industriales
 				</h1>
@@ -35,7 +35,7 @@ export const Hero = () => {
             </div>
             <div>
 
-						<Button variant='link' className="rounded-3xl px-10 text-secondary">Ver mas</Button>
+						<Button variant='link' className="rounded-3xl px-10 text-secondary dark:text-white">Ver mas</Button>
             </div>
 					</div>
 				</div>

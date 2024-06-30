@@ -10,7 +10,7 @@ export const SocialMediaIconsRow = () => {
   return (
 		<div className="flex gap-4 my-4">
 			{socialMedia.map(({ href, icon }) => (
-				<a key={href} href={href} target='_blank' className="text-4xl text-secondary">
+				<a key={href} href={href} target='_blank' className="text-4xl text-secondary dark:text-secondary-foreground">
 					{icon}
 				</a>
 			))}

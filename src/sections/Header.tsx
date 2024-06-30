@@ -9,7 +9,7 @@ const navItems = [
 
 export const Header = () => {
   return (
-		<nav className="flex justify-between items-center p-5 max-w-screen-lg mx-auto">
+		<nav className="flex justify-between items-center p-5 max-w-screen-lg mx-auto ">
       <Link href="/">
 			<Image
         height={100}

@@ -6,7 +6,8 @@ import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { Toaster } from "@/components/ui/toaster"
 import { FloatWhatsAppButton } from "@/sections/ui/FloatWhatsAppButton";
- 
+import { ThemeProvider } from "@/providers/ThemeProvider";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,15 +29,22 @@ export default function RootLayout({
 			<html lang="en">
 				<body
 					className={cn(
-						"min-h-screen bg-background font-sans antialiased",
+						"min-h-screen bg-background font-sans antialiased dark:bg-secondary dark:text-secondary-foreground",
 						inter.className
 					)}
 				>
-					<Header />
-					{children}
-					<Footer />
-					<Toaster />
-					<FloatWhatsAppButton/>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						<Header />
+						{children}
+						<Footer />
+						<Toaster />
+						<FloatWhatsAppButton />
+					</ThemeProvider>
 				</body>
 			</html>
 		</>

@@ -2,13 +2,13 @@ import { FooterForm } from '@/sections/forms/FooterForm'
 import Link from 'next/link';
 import React from 'react'
 import { SocialMediaIconsRow } from './ui/SocialMediaIconsRow';
-import { FormLabel } from '@/components/ui/form';
 import { Label } from '@/components/ui/label';
+import { ToggleButton } from './ui/ToggleMode';
 
 
 export const Footer = () => {
   return (
-		<footer className="flex justify-center p-3 pt-10 bg-secondary-foreground text-secondary ">
+		<footer className="flex justify-center p-3 pt-10 bg-secondary-foreground text-secondary dark:bg-secondary dark:text-secondary-foreground">
 			<div className='max-w-screen-lg md:grid md:grid-cols-2 gap-4'>
 				<div className="footer_info">
 					<h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
@@ -19,6 +19,7 @@ export const Footer = () => {
 						proceso
 					</p>
 					<SocialMediaIconsRow />
+					<ToggleButton />
 				</div>
 
 				<div className="md:flex  md:justify-between">

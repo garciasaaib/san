@@ -19,7 +19,7 @@ export const Contact = () => {
 				/>
 			</div>
 
-			<div className="text-secondary py-12 px-4 flex flex-col relative max-w-[500px]">
+			<div className="text-secondary py-12 px-4 flex flex-col relative max-w-[500px] dark:text-white">
 				<h2 className="text-center scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
 					Contacto
 				</h2>

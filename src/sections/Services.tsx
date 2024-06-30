@@ -33,7 +33,7 @@ const data = {
 }
 export const Services = () => {
   return (
-		<div className="bg-secondary-foreground text-secondary py-20">
+		<div className="bg-secondary-foreground text-secondary pt-10 py-20 dark:bg-secondary dark:text-secondary-foreground">
 			<div className="max-w-3xl m-auto py-20">
 				<h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
 					{data.title}

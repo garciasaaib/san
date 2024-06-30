@@ -49,9 +49,9 @@ const data = {
 }
 export const Projects = () => {
   return (
-		<div className="py-20">
+		<div className="pt-10 pb-20 dark:bg-primary-foreground dark:text-secondary-foreground">
 			<div className="max-w-3xl m-auto py-20">
-				<h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+				<h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
 					{data.title}
 				</h2>
 				<p className="text-center leading-7 [&:not(:first-child)]:mt-6">
