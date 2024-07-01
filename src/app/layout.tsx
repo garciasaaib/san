@@ -7,6 +7,7 @@ import { Footer } from "@/sections/Footer";
 import { Toaster } from "@/components/ui/toaster"
 import { FloatWhatsAppButton } from "@/sections/ui/FloatWhatsAppButton";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import Image from 'next/image';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,6 +41,7 @@ export default function RootLayout({
 						disableTransitionOnChange
 					>
 						<Header />
+
 						{children}
 						<Footer />
 						<Toaster />
@@ -50,3 +52,4 @@ export default function RootLayout({
 		</>
 	);
 }
+

@@ -1,4 +1,5 @@
 import React from 'react'
+import { CardTransition } from './ui/CardTransition'
 
 export const Place = () => {
   return (
@@ -27,7 +28,10 @@ export const Place = () => {
 				</p>
 				<br />
 			</div>
+
+
 			<div className="flex items-center justify-center w-full">
+			<CardTransition key={5}>
 				<iframe
 					className="w-full h-60"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.5143027611707!2d-104.89954692391638!3d21.448327680308104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427312160dffc15%3A0xd82935edc348a046!2sLeandro%20Ocampo%2C%20Xalisco%20Centro%2C%20Xalisco%2C%20Nay.!5e0!3m2!1ses-419!2smx!4v1719690471392!5m2!1ses-419!2smx"
@@ -36,6 +40,7 @@ export const Place = () => {
 					loading="lazy"
 					referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+			</CardTransition>
           </div>
 			</div>
 		</div>

@@ -5,6 +5,7 @@ import {
 
 import { ContactForm } from "./forms/ContactForm"
 import Image from "next/image"
+import { CardTransition } from "./ui/CardTransition"
 
 export const Contact = () => {
   return (
@@ -16,25 +17,30 @@ export const Contact = () => {
 					height={1080}
 					alt="background"
 					className="object-cover w-full h-full z-auto"
+					priority // Esto hace que la imagen se cargue prioritariamente
+
 				/>
 			</div>
 
-			<div className="text-secondary py-12 px-4 flex flex-col relative max-w-[500px] dark:text-white">
-				<h2 className="text-center scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-					Contacto
-				</h2>
-				<p className="pb-10 text-center leading-7 [&:not(:first-child)]:mt-6">
-					Diseño, construcción y automatización de procesos de cualquier indole,
-					con la mayor calidad.
-				</p>
+				<div className="text-secondary py-12 px-4 flex flex-col relative max-w-[500px] dark:text-white">
+					<h2 className="text-center scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+						Contacto
+					</h2>
 
-				{/* Card form */}
-				<Card className="">
-					<CardContent>
-						<ContactForm />
-					</CardContent>
-				</Card>
-			</div>
+					<p className="pb-10 text-center leading-7 [&:not(:first-child)]:mt-6">
+						Diseño, construcción y automatización de procesos de cualquier
+						indole, con la mayor calidad.
+					</p>
+
+					{/* Card form */}
+			<CardTransition key={4}>
+					<Card className="">
+						<CardContent>
+							<ContactForm />
+						</CardContent>
+					</Card>
+			</CardTransition>
+				</div>
 		</div>
 	);
 }

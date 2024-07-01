@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button";
+import { CardTransition } from "./ui/CardTransition";
 
 const data = {
   title: "Proyectos Automatizados",
@@ -54,9 +55,12 @@ export const Projects = () => {
 				<h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
 					{data.title}
 				</h2>
+				<CardTransition key={4}>
+
 				<p className="text-center leading-7 [&:not(:first-child)]:mt-6">
 					{data.subtitle}
 				</p>
+				</CardTransition>
 			</div>
 			<div className="max-w-screen-lg flex gap-10 px-4 justify-center m-auto">
 				<Carousel
